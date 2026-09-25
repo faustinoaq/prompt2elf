@@ -1,10 +1,10 @@
 # Prompt2ELF
 
-Prompt2ELF is an experiment in using an AI model as the front end of a zero-toolchain software pipeline.
+Prompt2ELF is a reusable Agent Skill for direct, zero-toolchain generation of Linux x86-64 ELF executables.
 
-Instead of generating C, Rust, assembly, a build configuration, or a framework project, the model reasons directly about the executable format, instruction encoding, operating system ABI, syscall interface, memory layout, and data representation. Its output is the final sequence of bytes that the target machine executes.
+Instead of generating C, Rust, assembly, a build configuration, or a framework project, the coding agent reasons directly about the executable format, instruction encoding, operating system ABI, syscall interface, memory layout, and data representation. Its output is the final sequence of bytes that the target machine executes.
 
-The current proof of concept targets Linux on x86-64 and includes four programs:
+The bundled Linux x86-64 reference suite includes four programs:
 
 - A 167-byte Hello World executable
 - A 334-byte hexadecimal binary writer
@@ -21,7 +21,7 @@ The name describes the interface directly:
 prompt -> reasoning -> ELF bytes -> execution
 ```
 
-An AI model becomes the software construction interface. ELF is the first target format, but the broader idea can extend to PE, Mach-O, firmware images, boot sectors, and other architecture-specific binary formats.
+An AI model becomes the software construction interface. ELF is the first supported target format, and the same method can extend to PE, Mach-O, firmware images, boot sectors, and other architecture-specific binary formats.
 
 ## What zero-toolchain means
 
@@ -46,11 +46,51 @@ This does not mean that computation has literally zero dependencies. The current
 
 The meaningful claim is narrower and testable: the generated programs have no compiler, assembler, linker, libc, language runtime, package, or framework dependency.
 
+## Agent Skill
+
+The root `SKILL.md` follows the open Agent Skills specification. It contains portable activation metadata, generation constraints, a byte-encoding workflow, validation requirements, and safety rules for coding agents.
+
+The repository can be installed as a skill for:
+
+| Agent | Project location | Personal location |
+| --- | --- | --- |
+| Claude Code | `.claude/skills/prompt2elf/` | `~/.claude/skills/prompt2elf/` |
+| Devin | `.devin/skills/prompt2elf/` | `~/.config/devin/skills/prompt2elf/` |
+| GitHub Copilot | `.github/skills/prompt2elf/` | `~/.copilot/skills/prompt2elf/` |
+| OpenCode | `.agents/skills/prompt2elf/` | `~/.agents/skills/prompt2elf/` |
+
+Clone or copy the complete repository into the location for the selected agent. The repository directory must remain named `prompt2elf` so it matches the skill name.
+
+Example personal installation for Claude Code:
+
+```bash
+mkdir -p ~/.claude/skills
+git clone https://github.com/faustinoaq/prompt2elf.git ~/.claude/skills/prompt2elf
+```
+
+Invoke it explicitly with `/prompt2elf` where slash skills are supported, or ask the agent to create, explain, modify, or verify a raw Linux x86-64 ELF binary.
+
+Example requests:
+
+```text
+Use Prompt2ELF to create a raw executable that prints the current process ID.
+Use Prompt2ELF to add a loopback-only HTTP status server.
+Use Prompt2ELF to explain every instruction in hex/hello.hex.
+Use Prompt2ELF to verify that all hexadecimal sources reproduce their binaries.
+```
+
+A project-local Devin adapter is included at `.devin/skills/prompt2elf/SKILL.md`. It loads the canonical portable skill from the repository root.
+
 ## Repository layout
 
 ```text
 prompt2elf/
+├── SKILL.md
 ├── README.md
+├── .devin/
+│   └── skills/
+│       └── prompt2elf/
+│           └── SKILL.md
 ├── bin/
 │   ├── hello.bin
 │   ├── hello-from-writer.bin
@@ -58,13 +98,14 @@ prompt2elf/
 │   ├── mandelbrot.bin
 │   └── server.bin
 └── hex/
+    ├── README.md
     ├── hello.hex
     ├── hexwriter.hex
     ├── mandelbrot.hex
     └── server.hex
 ```
 
-The files in `hex/` are plain hexadecimal representations of the executable bytes. They contain no assembly language and require no assembler.
+The files in `hex/` are plain hexadecimal representations of the executable bytes. They contain no assembly language and require no assembler. See `hex/README.md` for the byte layout, instruction groups, syscall use, build command, and verification procedure for every example.
 
 ## Quick start
 
@@ -150,7 +191,7 @@ At that point the process is self-hosting at the byte-materialization layer. An 
 
 A binary writer cannot create itself before any executable bytes exist. The first writer needs a bootstrap path.
 
-In this experiment, the initial `hexwriter.bin` was emitted with the shell's built-in `printf`, using byte escapes such as `\x7f`, followed by one `chmod` operation. After that initial seed, the writer can reproduce itself and create all other binaries.
+For the initial bootstrap, `hexwriter.bin` was emitted with the shell's built-in `printf`, using byte escapes such as `\x7f`, followed by one `chmod` operation. After that initial seed, the writer can reproduce itself and create all other binaries.
 
 If an AI interface can write arbitrary byte arrays directly, even this bootstrap command is unnecessary. The model can return a binary payload rather than textual hexadecimal. The operating system still needs to store it with executable permissions and invoke it.
 
@@ -302,7 +343,7 @@ promptelf inspect
 
 That binary could provide a compact user environment made entirely from directly synthesized instructions and syscall interactions. There is no theoretical requirement for a higher-level language in the middle. The main constraints are engineering complexity, correctness, maintainability, portability, and security.
 
-## A possible AI-to-binary interface
+## AI-to-binary interface
 
 A practical interface needs a precise target profile:
 
@@ -334,7 +375,7 @@ The model is functioning as planner, code generator, instruction encoder, linker
 
 ## Why this is interesting
 
-Modern software stacks often contain millions of lines of transitive dependencies before a program prints one line or accepts one socket. Prompt2ELF explores the opposite extreme.
+Modern software stacks often contain millions of lines of transitive dependencies before a program prints one line or accepts one socket. Prompt2ELF takes the opposite approach.
 
 The examples demonstrate that:
 
@@ -345,7 +386,7 @@ The examples demonstrate that:
 - A tiny native writer can bootstrap additional programs
 - AI can bridge human intent and architecture-specific bytes directly
 
-This is not automatically a replacement for compilers. Compilers provide optimization, portability, diagnostics, reproducibility, debug information, tested transformations, and decades of correctness work. Prompt2ELF is a different interface and a useful exploration of what becomes possible when a model can reason accurately at every layer.
+Prompt2ELF does not replace compilers by default. Compilers provide optimization, portability, diagnostics, reproducibility, debug information, tested transformations, and decades of correctness work. Prompt2ELF provides a direct interface for cases where a model can reason accurately at every layer and final executable bytes are the required artifact.
 
 ## Current limitations
 
@@ -371,4 +412,4 @@ A useful next milestone is a single raw multicall executable with a small collec
 - A clearly defined architecture profile
 - Small, inspectable artifacts
 
-Prompt2ELF is a proof that source code is not the only possible interface between an idea and a machine. With a precise target and enough architectural knowledge, the interface can be the executable itself.
+Prompt2ELF demonstrates that source code is not the only possible interface between an idea and a machine. With a precise target and enough architectural knowledge, the interface can be the executable itself.
