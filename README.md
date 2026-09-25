@@ -11,7 +11,7 @@ The current proof of concept targets Linux on x86-64 and includes four programs:
 - A 322-byte ASCII Mandelbrot renderer
 - A 449-byte HTTP server listening on `0.0.0.0:9000`
 
-No compiler, assembler, linker, package manager, standard library, language runtime, or application framework was used to generate these executables.
+No compiler, assembler, linker, package manager, standard library, language runtime, or application framework is required to reproduce these executables from the included hexadecimal sources.
 
 ## Why Prompt2ELF?
 
