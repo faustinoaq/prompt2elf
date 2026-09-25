@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/prompt2elf-logo.svg" alt="Prompt2ELF elf wizard casting a command into executable bytes" width="1000">
+</p>
+
 # Prompt2ELF
 
 Prompt2ELF is a reusable Agent Skill for direct, zero-toolchain generation of Linux x86-64 ELF executables.

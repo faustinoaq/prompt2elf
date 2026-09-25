@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Prompt2ELF</title>
+  <desc id="desc">A bespectacled elf wizard types a command that becomes ELF magic bytes.</desc>
+  <defs>
+    <pattern id="paper-speckle" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="8" r="1" fill="#e8d7a7" opacity="0.05"/>
+      <circle cx="26" cy="19" r="1.2" fill="#e8d7a7" opacity="0.04"/>
+      <path d="M12 31l3-2M31 4l2 3" stroke="#e8d7a7" stroke-width="1" opacity="0.04"/>
+    </pattern>
+    <style>
+      .ink { stroke: #25271f; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .fine { stroke: #25271f; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .fantasy { font-family: Georgia, "Times New Roman", serif; }
+    </style>
+  </defs>
+
+  <rect x="5" y="5" width="1190" height="410" rx="25" fill="#172018" stroke="#d6b45f" stroke-width="5"/>
+  <rect x="17" y="17" width="1166" height="386" rx="18" fill="url(#paper-speckle)" stroke="#70865f" stroke-width="2"/>
+
+  <g fill="none" stroke="#d6b45f" stroke-width="3" stroke-linecap="round">
+    <path d="M37 73V38H72M1128 38h35v35M37 347v35h35M1128 382h35v-35"/>
+    <path d="M50 50l9-9 9 9-9 9zM1132 50l9-9 9 9-9 9zM50 370l9-9 9 9-9 9zM1132 370l9-9 9 9-9 9z"/>
+  </g>
+
+  <g transform="translate(25 8)">
+    <path d="M80 137Q98 87 143 53Q178 27 227 20Q210 48 187 73Q236 78 278 128Q237 112 205 130Q146 114 80 137Z" fill="#675077" class="ink"/>
+    <path d="M78 132Q145 110 215 126Q245 132 279 126Q266 153 222 156Q144 159 73 148Z" fill="#846693" class="ink"/>
+    <path d="M151 52l8 15 17 2-12 12 3 17-16-8-15 8 3-17-13-12 18-2z" fill="#d6b45f" class="fine"/>
+
+    <path d="M82 172L21 145L69 209Q80 207 96 194Z" fill="#dcae83" class="ink"/>
+    <path d="M224 171l67-28-53 66q-17-2-31-16z" fill="#dcae83" class="ink"/>
+    <path d="M44 158l35 25M267 157l-37 27" fill="none" class="fine"/>
+
+    <path d="M91 143Q91 115 128 105Q176 91 214 122Q233 138 229 177Q226 226 162 239Q101 229 87 184Q82 163 91 143Z" fill="#e7bd91" class="ink"/>
+    <path d="M91 151Q105 112 145 106Q126 129 132 151Q112 141 91 151Z" fill="#ba7b42" class="fine"/>
+    <path d="M203 118Q229 137 229 174Q218 157 198 148Q211 136 203 118Z" fill="#ba7b42" class="fine"/>
+    <path d="M95 191Q105 222 132 231L116 244Q82 223 79 190Z" fill="#ba7b42" class="fine"/>
+    <path d="M226 189Q217 221 190 233L209 245Q238 220 241 190Z" fill="#ba7b42" class="fine"/>
+
+    <circle cx="128" cy="169" r="24" fill="#f0dfbb" fill-opacity="0.35" class="fine"/>
+    <circle cx="189" cy="169" r="24" fill="#f0dfbb" fill-opacity="0.35" class="fine"/>
+    <path d="M152 169h13M104 165l-15-5M213 165l15-5" fill="none" class="fine"/>
+    <circle cx="131" cy="171" r="5" fill="#25271f"/>
+    <circle cx="186" cy="171" r="5" fill="#25271f"/>
+    <path d="M160 174l-7 20 13 2M140 210q20 15 41 0" fill="none" class="fine"/>
+    <path d="M147 218q14 20 28 0" fill="#f0dfbb" class="fine"/>
+
+    <path d="M99 252Q121 228 158 232Q200 230 226 253L249 325H73Z" fill="#4e7455" class="ink"/>
+    <path d="M137 237l22 31 23-31M159 268v54" fill="none" stroke="#d6b45f" stroke-width="3"/>
+    <path d="M147 279l12-9 12 9-12 10z" fill="#675077" class="fine"/>
+
+    <path d="M248 275L331 165" fill="none" stroke="#7c5736" stroke-width="9" stroke-linecap="round"/>
+    <path d="M245 277L332 163" fill="none" stroke="#d6b45f" stroke-width="2" stroke-linecap="round"/>
+    <path d="M337 147l5 12 13 4-12 6-1 14-9-11-13 3 7-11-7-11 13 3z" fill="#d6b45f" class="fine"/>
+
+    <path d="M66 287Q86 269 111 285L126 317H76Z" fill="#e7bd91" class="ink"/>
+    <path d="M207 285Q234 268 252 292L240 318H193Z" fill="#e7bd91" class="ink"/>
+
+    <g transform="translate(25 296)">
+      <path d="M0 0H270Q284 0 284 14V91Q284 105 270 105H0Q-14 105-14 91V14Q-14 0 0 0Z" fill="#24291f" class="ink"/>
+      <rect x="2" y="13" width="266" height="70" rx="7" fill="#101710" stroke="#70865f" stroke-width="2"/>
+      <circle cx="16" cy="9" r="3" fill="#d6b45f"/>
+      <circle cx="29" cy="9" r="3" fill="#8ca777"/>
+      <text x="17" y="42" class="mono" font-size="17" font-weight="700" fill="#b9d69f">&gt; forge hello</text>
+      <text x="17" y="68" class="mono" font-size="14" fill="#d6b45f">casting ELF64...</text>
+      <path d="M25 94h220" stroke="#4b5544" stroke-width="3" stroke-dasharray="5 6"/>
+    </g>
+  </g>
+
+  <g fill="#d6b45f" stroke="#25271f" stroke-width="2">
+    <path d="M372 126l4 10 11 4-10 5-1 11-7-9-11 3 6-10-6-9 11 3z"/>
+    <path d="M405 87l3 7 8 3-7 4-1 8-5-6-8 2 4-7-4-7 8 2z"/>
+    <path d="M430 143l3 8 9 3-8 4-1 9-6-7-9 2 5-8-5-8 9 3z"/>
+  </g>
+  <path d="M358 170Q393 149 424 174" fill="none" stroke="#d6b45f" stroke-width="3" stroke-dasharray="5 8"/>
+
+  <g transform="translate(432 0)">
+    <text x="0" y="89" class="mono" font-size="14" font-weight="700" letter-spacing="3" fill="#92ad7f">THE BYTE MAGE'S SPELLBOOK</text>
+    <text x="-4" y="175" class="fantasy" font-size="78" font-weight="700" fill="#f0dfbb">Prompt</text>
+    <text x="257" y="175" class="mono" font-size="72" font-weight="800" fill="#d6b45f">2</text>
+    <text x="304" y="175" class="mono" font-size="72" font-weight="800" fill="#9fbe88">ELF</text>
+    <path d="M1 193H612" stroke="#70865f" stroke-width="2"/>
+    <path d="M1 193l12-7 12 7-12 7zM588 193l12-7 12 7-12 7z" fill="#d6b45f" stroke="#25271f" stroke-width="2"/>
+
+    <g transform="translate(0 219)">
+      <path d="M15 0H626Q641 0 641 15V71Q641 86 626 86H15Q0 86 0 71V15Q0 0 15 0Z" fill="#eadbb7" stroke="#d6b45f" stroke-width="4"/>
+      <path d="M15 0q-20 17 0 34q-20 17 0 37M626 0q20 17 0 34q20 17 0 37" fill="#d3bd87" stroke="#8c713e" stroke-width="2"/>
+      <text x="34" y="52" class="mono" font-size="21" font-weight="700" fill="#293128">&gt; forge --format elf64 "hello, world"</text>
+    </g>
+
+    <g transform="translate(13 327)">
+      <text x="0" y="28" class="mono" font-size="14" font-weight="700" fill="#92ad7f">SPELL</text>
+      <path d="M64 22h29" stroke="#d6b45f" stroke-width="3"/>
+      <path d="M84 15l10 7-10 7" fill="none" stroke="#d6b45f" stroke-width="3"/>
+
+      <g transform="translate(106 0)">
+        <rect width="50" height="43" rx="5" fill="#3c503c" stroke="#d6b45f" stroke-width="2"/>
+        <rect x="59" width="50" height="43" rx="5" fill="#3c503c" stroke="#d6b45f" stroke-width="2"/>
+        <rect x="118" width="50" height="43" rx="5" fill="#3c503c" stroke="#d6b45f" stroke-width="2"/>
+        <rect x="177" width="50" height="43" rx="5" fill="#3c503c" stroke="#d6b45f" stroke-width="2"/>
+        <text x="12" y="28" class="mono" font-size="17" fill="#f0dfbb">7F</text>
+        <text x="71" y="28" class="mono" font-size="17" fill="#f0dfbb">45</text>
+        <text x="130" y="28" class="mono" font-size="17" fill="#f0dfbb">4C</text>
+        <text x="189" y="28" class="mono" font-size="17" fill="#f0dfbb">46</text>
+      </g>
+
+      <path d="M347 22h35" stroke="#d6b45f" stroke-width="3"/>
+      <path d="M373 15l10 7-10 7" fill="none" stroke="#d6b45f" stroke-width="3"/>
+
+      <g transform="translate(399 -9)">
+        <path d="M0 0H72l23 23v68H0Z" fill="#eadbb7" stroke="#25271f" stroke-width="3"/>
+        <path d="M72 0v23h23" fill="#d3bd87" stroke="#25271f" stroke-width="3"/>
+        <text x="47" y="59" text-anchor="middle" class="mono" font-size="22" font-weight="800" fill="#4e7455">ELF</text>
+        <path d="M18 70h58M18 79h42" stroke="#8c713e" stroke-width="2"/>
+      </g>
+    </g>
+
+    <text x="0" y="397" class="mono" font-size="14" font-weight="700" letter-spacing="2" fill="#d6b45f">PROMPT THE ELF. SUMMON THE BINARY.</text>
+  </g>
+</svg>
