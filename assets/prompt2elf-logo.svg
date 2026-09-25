@@ -32,11 +32,11 @@
     <path d="M224 171l67-28-53 66q-17-2-31-16z" fill="#dcae83" class="ink"/>
     <path d="M44 158l35 25M267 157l-37 27" fill="none" class="fine"/>
 
+    <path d="M99 137Q78 161 84 191Q87 214 106 229L124 211Q109 193 111 169Q112 150 99 137Z" fill="#a96f3f" class="ink"/>
+    <path d="M211 136Q235 158 234 188Q232 211 213 229L195 211Q211 193 208 168Q206 149 211 136Z" fill="#a96f3f" class="ink"/>
     <path d="M91 143Q91 115 128 105Q176 91 214 122Q233 138 229 177Q226 226 162 239Q101 229 87 184Q82 163 91 143Z" fill="#e7bd91" class="ink"/>
-    <path d="M91 151Q105 112 145 106Q126 129 132 151Q112 141 91 151Z" fill="#ba7b42" class="fine"/>
-    <path d="M203 118Q229 137 229 174Q218 157 198 148Q211 136 203 118Z" fill="#ba7b42" class="fine"/>
-    <path d="M95 191Q105 222 132 231L116 244Q82 223 79 190Z" fill="#ba7b42" class="fine"/>
-    <path d="M226 189Q217 221 190 233L209 245Q238 220 241 190Z" fill="#ba7b42" class="fine"/>
+    <path d="M90 155Q90 123 125 107Q164 90 201 110Q224 122 230 153Q216 145 201 143Q184 140 173 126Q159 143 139 150Q118 157 90 155Z" fill="#a96f3f" class="ink"/>
+    <path d="M111 124Q124 131 132 148M144 111Q147 132 139 150M178 112Q176 130 173 126M202 120Q196 134 201 143" fill="none" stroke="#70472f" stroke-width="3" stroke-linecap="round"/>
 
     <circle cx="128" cy="169" r="24" fill="#f0dfbb" fill-opacity="0.35" class="fine"/>
     <circle cx="189" cy="169" r="24" fill="#f0dfbb" fill-opacity="0.35" class="fine"/>
@@ -62,8 +62,8 @@
       <rect x="2" y="13" width="266" height="70" rx="7" fill="#101710" stroke="#70865f" stroke-width="2"/>
       <circle cx="16" cy="9" r="3" fill="#d6b45f"/>
       <circle cx="29" cy="9" r="3" fill="#8ca777"/>
-      <text x="17" y="42" class="mono" font-size="17" font-weight="700" fill="#b9d69f">&gt; forge hello</text>
-      <text x="17" y="68" class="mono" font-size="14" fill="#d6b45f">casting ELF64...</text>
+      <text x="17" y="40" class="mono" font-size="16" font-weight="700" fill="#b9d69f">&gt; /prompt2elf</text>
+      <text x="17" y="66" class="mono" font-size="13" fill="#d6b45f">forge "hello, world"_</text>
       <path d="M25 94h220" stroke="#4b5544" stroke-width="3" stroke-dasharray="5 6"/>
     </g>
   </g>
@@ -77,16 +77,14 @@
 
   <g transform="translate(432 0)">
     <text x="0" y="89" class="mono" font-size="14" font-weight="700" letter-spacing="3" fill="#92ad7f">THE BYTE MAGE'S SPELLBOOK</text>
-    <text x="-4" y="175" class="fantasy" font-size="78" font-weight="700" fill="#f0dfbb">Prompt</text>
-    <text x="257" y="175" class="mono" font-size="72" font-weight="800" fill="#d6b45f">2</text>
-    <text x="304" y="175" class="mono" font-size="72" font-weight="800" fill="#9fbe88">ELF</text>
+    <text x="-4" y="175" class="fantasy" font-size="78" font-weight="700"><tspan fill="#f0dfbb">Prompt</tspan><tspan fill="#d6b45f">2</tspan><tspan dx="5" class="mono" font-size="72" font-weight="800" fill="#9fbe88">ELF</tspan></text>
     <path d="M1 193H612" stroke="#70865f" stroke-width="2"/>
     <path d="M1 193l12-7 12 7-12 7zM588 193l12-7 12 7-12 7z" fill="#d6b45f" stroke="#25271f" stroke-width="2"/>
 
     <g transform="translate(0 219)">
       <path d="M15 0H626Q641 0 641 15V71Q641 86 626 86H15Q0 86 0 71V15Q0 0 15 0Z" fill="#eadbb7" stroke="#d6b45f" stroke-width="4"/>
       <path d="M15 0q-20 17 0 34q-20 17 0 37M626 0q20 17 0 34q20 17 0 37" fill="#d3bd87" stroke="#8c713e" stroke-width="2"/>
-      <text x="34" y="52" class="mono" font-size="21" font-weight="700" fill="#293128">&gt; forge --format elf64 "hello, world"</text>
+      <text x="34" y="52" class="mono" font-size="21" font-weight="700" fill="#293128">&gt; /prompt2elf forge "hello, world"</text>
     </g>
 
     <g transform="translate(13 327)">

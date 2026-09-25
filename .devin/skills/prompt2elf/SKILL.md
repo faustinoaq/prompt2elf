@@ -4,7 +4,7 @@ description: Generates, modifies, explains, and verifies raw Linux x86-64 ELF ex
 compatibility: Requires Linux x86-64 and permission to read, write, and execute files. Uses the bundled bin/hexwriter.bin to materialize hexadecimal sources.
 metadata:
   author: Faustino Aguilar
-  version: "1.0.0"
+  version: "1.1.0"
   target: linux-x86-64
   format: elf64
 ---

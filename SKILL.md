@@ -4,7 +4,7 @@ description: Generates, modifies, explains, and verifies raw Linux x86-64 ELF ex
 compatibility: Requires Linux x86-64 and permission to read, write, and execute files. Uses the bundled bin/hexwriter.bin to materialize hexadecimal sources. Network programs may require permission to bind a user-approved local port.
 metadata:
   author: Faustino Aguilar
-  version: "1.0.0"
+  version: "1.1.0"
   target: linux-x86-64
   format: elf64
 ---
@@ -27,6 +27,22 @@ Activate Prompt2ELF when the user asks to:
 - Design a small BusyBox-style multicall binary
 
 If the requested target is not Linux x86-64, state that the bundled profile does not apply. Obtain the architecture, operating system ABI, executable format, and endianness before generating bytes for another target.
+
+## Invocation shorthand
+
+Treat this invocation:
+
+```text
+/prompt2elf forge "PROGRAM DESCRIPTION"
+```
+
+as a request to design, encode, materialize, and verify a new raw executable from the quoted description. For example:
+
+```text
+/prompt2elf forge "hello, world"
+```
+
+The word `forge` is scoped under the Prompt2ELF skill. It is not a standalone executable and must not invoke Foundry, a Rust package, or any other installed `forge` command.
 
 ## Resolve the skill root
 

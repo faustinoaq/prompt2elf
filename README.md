@@ -77,11 +77,14 @@ Invoke it explicitly with `/prompt2elf` where slash skills are supported, or ask
 Example requests:
 
 ```text
+/prompt2elf forge "hello, world"
 Use Prompt2ELF to create a raw executable that prints the current process ID.
 Use Prompt2ELF to add a loopback-only HTTP status server.
 Use Prompt2ELF to explain every instruction in hex/hello.hex.
 Use Prompt2ELF to verify that all hexadecimal sources reproduce their binaries.
 ```
+
+In the shorthand form, `forge` is a Prompt2ELF skill action rather than a standalone CLI command. It does not invoke Foundry or another installed tool named `forge`.
 
 A project-local Devin adapter is included at `.devin/skills/prompt2elf/SKILL.md`. It loads the canonical portable skill from the repository root.
 
