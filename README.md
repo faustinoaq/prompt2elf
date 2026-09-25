@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/prompt2elf-logo.svg" alt="Prompt2ELF elf wizard casting a command into executable bytes" width="1000">
+  <img src="https://raw.githubusercontent.com/faustinoaq/prompt2elf/refs/heads/main/assets/prompt2elf-logo.svg" alt="Prompt2ELF elf wizard casting a command into executable bytes" width="1000">
 </p>
 
 # Prompt2ELF
@@ -86,18 +86,14 @@ Use Prompt2ELF to verify that all hexadecimal sources reproduce their binaries.
 
 In the shorthand form, `forge` is a Prompt2ELF skill action rather than a standalone CLI command. It does not invoke Foundry or another installed tool named `forge`.
 
-A project-local Devin adapter is included at `.devin/skills/prompt2elf/SKILL.md`. It loads the canonical portable skill from the repository root.
-
 ## Repository layout
 
 ```text
 prompt2elf/
 ├── SKILL.md
 ├── README.md
-├── .devin/
-│   └── skills/
-│       └── prompt2elf/
-│           └── SKILL.md
+├── assets/
+│   └── prompt2elf-logo.svg
 ├── bin/
 │   ├── hello.bin
 │   ├── hello-from-writer.bin
